@@ -1,0 +1,130 @@
+
+<!-- Navigation dropdown bar implementation solution -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maidily's Nav-bar Demo</title>
+
+        <style>
+            body {
+                margin: 0px 25px;
+            }
+
+            /* Header css property */
+            header {
+                background-color: lightsalmon;
+                font-size: 130%;
+                min-height: 100px;
+                max-height: 120px;
+            }
+            header h1 {
+                margin: 0%;
+                padding-top: 1.5%;
+                padding-right: 2.5%;
+                text-align: right;
+            }
+
+            /* Navigation bar css property */
+            nav {
+                background-color: rgb(202, 193, 193);
+                display: block;
+                min-height: 30px;
+                max-height: 48px;
+            }
+
+            /* Navigation bar links default property */
+            .nav-link {
+                text-decoration: none;
+                list-style: none;
+                display: flex;
+                vertical-align: middle;
+                margin-top: 0%;
+                
+            }
+            .nav-link li {
+                text-decoration: none;               
+                flex-basis: 8%;
+                vertical-align: middle;
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+            .nav-link a {
+                text-decoration: none;
+                color: black;
+                text-align: center;
+                padding: 0% 30% ;
+                
+            }
+
+            /* Navigation bar dropdown default property */
+            .dropdown1, .dropdown2 {
+                display: none;
+                position: absolute;
+                background-color: black;
+                width: auto;
+                top: 19%;
+            }
+            .dropdown1 a, .dropdown2 a {
+                text-decoration: none;
+                padding: 10% 30% ;
+                text-align: center;
+                color: black;           
+            }
+
+            /* Navigation bar hover effects */
+            .nav-link > li:hover {               
+                background-color: black;
+            }
+            .nav-link > li:hover a {
+                color: white;
+                background-color: black;
+            }
+
+            /* Navigation bar hover -> dropdown visibility */
+            .nav-link li:nth-child(2):hover .dropdown1, .nav-link li:nth-child(3):hover .dropdown2 {
+                display: block;
+            }
+            .dropdown1 li, .dropdown2 li {
+                display: block;
+                padding: 20% 0% ;
+                margin-left: -40px;
+            }
+
+            /* Dropdown links hover style */
+            .dropdown1 li:hover, .dropdown2 li:hover {
+                background-color: lightblue;
+            }
+            .dropdown1 li:hover a, .dropdown2 li:hover a {
+                background-color: lightblue;
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header><h1>Demo of Dropdown</h1></header>
+        <nav class="menu-nav">         
+            <ul class="nav-link" >
+                <li>
+                    <a id="link1" href="#">Link 1</a>
+                </li>
+                <li>
+                    <a id="link2" href="#">Link 2</a>
+                    <ul class="dropdown1">
+                        <li><a href="#">DD_link_1</a></li>
+                        <li><a href="#">DD_link_2</a></li>
+                        <li><a href="#">DD_link_3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="link3" href="#">Link 3</a>
+                    <ul class="dropdown2">
+                        <li><a href="#">DD_link_1</a></li>
+                        <li><a href="#">DD_link_2</a></li>
+                        <li><a href="#">DD_link_3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>

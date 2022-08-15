@@ -1,0 +1,109 @@
+
+<!-- Bar Graph implementation solution -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maidily's Bar Graph Demo</title>
+
+        <style>
+            body {
+                margin: 0px 25px;
+                text-align: center;
+            }
+
+            /* Graph section default properties */
+            .graph {
+                position: absolute;
+                vertical-align: middle;
+                background-color: lightblue;
+                width: 50%;
+                height: 80%;
+                margin-left: 23%;
+                margin-top: 5%;
+            }
+
+            /* Bar spacing and alignment properties */
+            .graph article {
+                display: inline-block;
+                padding: 1% 12%;
+            }
+
+            div {
+                width: 200%;
+                height: 400px;
+                margin-top: 100%;
+                background-color: gray;
+                margin-left: -15px;
+            }
+
+            /* Bar common properties */
+            #bar1, #bar2, #bar3 {
+                width: 77%;
+                background-color: whitesmoke;
+            }
+
+            /* Bar 1 (30%) animation properties */
+            #bar1 {
+                height: 70%;
+                animation-name: animatebar1;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+            }
+            @keyframes animatebar1 {
+                0% {height: 100%; background-color: whitesmoke;}
+                100% {height: 70%; background-color: whitesmoke;}
+            }
+
+            /* Bar 2 (40%) animation properties */
+            #bar2 {
+                height: 60%;
+                animation-name: animatebar2;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+            }
+            @keyframes animatebar2 {
+                0% {height: 100%; background-color: whitesmoke;}
+                100% {height: 60%; background-color: whitesmoke;}
+            }
+
+            /* Bar 3 (80%) animation properties */
+            #bar3 {
+                height: 20%;
+                animation-name: animatebar3;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+            }
+            @keyframes animatebar3 {
+                0% {height: 100%; background-color: whitesmoke;}
+                100% {height: 20%; background-color: whitesmoke;}
+            }
+            
+
+        </style>
+    </head>
+    <body>
+
+        <section class="graph">
+            <article>
+                <div>
+                    <article id="bar1"></article>
+                </div>
+                <p>30%</p>
+            </article>
+            <article>
+                <div>
+                    <article id="bar2"></article>
+                </div>
+                <p>40%</p>
+            </article>
+            <article>
+                <div>
+                    <article id="bar3"></article>
+                </div>
+                <p>80%</p>
+            </article>
+            <h1>Bar Plot</h1>
+        </section>
+
+    </body>
+</html>
